@@ -23,5 +23,4 @@ function! s:Toggle()
 endfunction
 
 command! TodoToggle call <SID>Toggle()
-nmap <buffer> <C-Space> :TodoToggle<CR>
-
+au FileType todo nmap <buffer> <C-Space> :TodoToggle<CR>
