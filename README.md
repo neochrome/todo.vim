@@ -21,4 +21,4 @@ Checking/unchecking is done by pressing `ctrl+space` in normal mode.
 Any file extension can be used as long as the last line of the file reads
 `vim: ft=todo`
 
-For a complete example please see [example.txt](blob/master/example.txt)
+For a complete example please see [example.txt](todo.vim/blob/master/example.txt)
