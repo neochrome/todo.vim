@@ -16,9 +16,12 @@ Drop the contents into your `~/.vim` directory as is.
 Usage
 -----
 Todo items are denoted by putting square brackets first on a line (after any indentation).
+
 Checking/unchecking is done by pressing `ctrl+space` in normal mode.
 
-Any file extension can be used as long as the last line of the file reads
-`vim: ft=todo`
+To enable checkbox toggling in a new buffer issue `:set ft=todo`.
 
-For a complete example please see [example.txt](todo.vim/blob/master/example.txt)
+Any file extension can be used as long as the last line of the file reads
+`vim: ft=todo`.
+
+For a complete example please see [example.txt](todo.vim/blob/master/example.txt).
