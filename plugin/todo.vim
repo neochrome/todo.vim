@@ -4,11 +4,11 @@ endif
 let g:loaded_todo = 1
 
 function! s:Check()
-	exe 's/^\(\s*\)\[ ]\(.*\)$/\1[x]\2/'
+	exe 'silent! s/^\(\s*\)\[ ]\(.*\)$/\1[x]\2/'
 endfunction
 
 function! s:UnCheck()
-	exe 's/^\(\s*\)\[x]\(.*\)$/\1[ ]\2/i'
+	exe 'silent! s/^\(\s*\)\[x]\(.*\)$/\1[ ]\2/i'
 endfunction
 
 function! s:Toggle()
@@ -23,4 +23,4 @@ function! s:Toggle()
 endfunction
 
 command! TodoToggle call <SID>Toggle()
-au FileType todo nmap <buffer> <C-Space> :TodoToggle<CR>
+au FileType todo nmap <silent><buffer> <C-Space> :TodoToggle<CR>
