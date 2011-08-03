@@ -16,7 +16,7 @@ hi link TodoTitle Title
 hi link TodoTitleMark Normal
 hi link TodoItem Special
 hi link TodoCheckBox Identifier
-hi link TodoCheckBoxDone Ignore
+hi link TodoCheckBoxDone Comment
 hi link TodoVimPreProcessor NonText
 hi link TodoFileTypeSpec NonText
 
