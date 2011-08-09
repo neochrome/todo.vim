@@ -1,7 +1,17 @@
-[x] item 1
-	[x] item 1.1
-	[ ] item 1.2
-	[ ] item 1.3
-[x] item 1
+= Header =
+[x] checked top level item
+		[x] checked sub item
+		[ ] a sub item
+				with additional text attached
+				on multiple lines
+		[x] another sub item, this one checked
+				also with multiple lines
+[ ] a top level item
+		with additional text attached
+		on multiple lines
+[ ] another to level item
+
+regular text with no check box marker
+also on multiple lines
 
 vim: ft=todo
