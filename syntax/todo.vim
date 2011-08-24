@@ -6,9 +6,9 @@ endif
 
 syn match TodoTitle /=.*=/ contains=TodoTitleMark
 syn match TodoTitleMark /=/ contained
-syn match TodoItem /^\s*\zs\[ \]\_.\{-}\ze\(\s*\[.\]\|\n\n\)/ contains=TodoItemCheckBox
+syn match TodoItem /^\s*\zs\[ \]\_.\{-}\ze\(\_^\s*\[.\]\|\n\S\|\%$\)/ contains=TodoItemCheckBox
 syn match TodoItemCheckBox /\[ \]/ contained
-syn match TodoItemDone /^\s*\zs\[x\]\_.\{-}\ze\(\s*\[.\]\|\n\n\)/
+syn match TodoItemDone /^\s*\zs\[x\]\_.\{-}\ze\(\_^\s*\[.\]\|\n\S\|\%$\)/
 syn match TodoVimPreProcessor /^vim:.*$/ contains=TodoFileTypeSpec
 syn match TodoFileTypeSpec /ft=todo/ contained
 
