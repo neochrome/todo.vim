@@ -4,8 +4,7 @@ Super simple TODO plugin for Vim
 Installing
 ----------
 ### With [vundle](https://github.com/gmarik/vundle)
-1. Add the following to your `.vimrc`:
-	`Bundle 'neochrome/todo.vim`
+1. Reference the plugin in your `.vimrc` with: `Bundle 'neochrome/todo.vim`
 2. Launch `vim` and run `:BundleInstall`
 
 ### As a git-submodule with Pathogen
@@ -21,6 +20,7 @@ Drop the contents into your `~/.vim` directory as is.
 Configuration
 -------------
 Example `.vimrc`:
+
     let g:TodoDoneChar = 'x'	" x is used by default
 
 Usage
