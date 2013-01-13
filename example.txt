@@ -1,17 +1,14 @@
-= Header =
-[x] checked top level item
-		[x] checked sub item
-		[ ] a sub item
-				with additional text attached
-				on multiple lines
-		[x] another sub item, this one checked
-				also with multiple lines
-[ ] a top level item
-		with additional text attached
-		on multiple lines
-[ ] another to level item
+= Header (Title) =
+[ ] item 1, first row (Special)
+[ ] item 2, first row (Special)
+		item 2, additional text (Comment)
+		[ ] item 2.1, first row (Special)
+		[x] item 2.2, first row, checked (Ignore)
+				item 2.2, additional text, checked (Ignore)
 
-regular text with no check box marker
-also on multiple lines
-
+Some (Normal) text since preceeded with a blank line
+[ ] item 3, first row (Special)
+[ ] item 4, first row with a = Header (Title) =, otherwise (Special)
+		item 4, additional text, usually (Comment)
+		but = Header (Title) = is also possible
 vim: ft=todo

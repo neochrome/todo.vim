@@ -6,17 +6,20 @@ endif
 
 syn match TodoTitle /=.*=/ contains=TodoTitleMark
 syn match TodoTitleMark /=/ contained
-syn match TodoItem /^\s*\zs\[ \]\_.\{-}\ze\(\_^\s*\[.\]\|\n\S\|\%$\)/ contains=TodoItemCheckBox
+syn region TodoItem start="\s*\zs\[ \]" end="\ze\(\n\s*\n\|\[.\]\)" keepend contains=TodoItemCheckBox, TodoItemAdditionalText, TodoVimPreProcessor, TodoTitle
 syn match TodoItemCheckBox /\[ \]/ contained
-syn match TodoItemDone /^\s*\zs\[x\]\_.\{-}\ze\(\_^\s*\[.\]\|\n\S\|\%$\)/
+syn match TodoItemAdditionalText /\n\_.*$/ contained contains=TodoTitle, TodoVimPreProcessor
+syn region TodoItemDone start="\s*\zs\[\S\]" end="\ze\(\n\s*\n\|\[.\]\)" contains=TodoVimPreProcessor
 syn match TodoVimPreProcessor /^vim:.*$/ contains=TodoFileTypeSpec
 syn match TodoFileTypeSpec /ft=todo/ contained
+syn sync linebreaks=1
 
 hi link TodoTitle Title
 hi link TodoTitleMark Normal
 hi link TodoItem Special
+hi link TodoItemAdditionalText Comment
 hi link TodoItemCheckBox Identifier
-hi link TodoItemDone Comment
+hi link TodoItemDone Ignore
 hi link TodoVimPreProcessor NonText
 hi link TodoFileTypeSpec NonText
 
