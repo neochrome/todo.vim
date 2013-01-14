@@ -21,7 +21,17 @@ Configuration
 -------------
 Example `.vimrc`:
 
+    " todo.vim settings
     let g:TodoDoneChar = 'x'	" x is used by default
+    
+    " todo.vim default highlight groups
+    " feel free to override as wanted
+    hi link TodoTitle Title
+    hi link TodoTitleMark Normal
+    hi link TodoItem Special
+    hi link TodoItemAdditionalText Comment
+    hi link TodoItemCheckBox Identifier
+    hi link TodoItemDone Ignore
 
 Usage
 -----
