@@ -2,6 +2,7 @@ if exists('g:loaded_todo')
 	finish
 endif
 let g:loaded_todo = 1
+let g:TodoDoneChar = 'x'
 
 function! s:Check()
 	exe 'silent! s/^\(\s*\)\[ ]\(.*\)$/\1['.g:TodoDoneChar.']\2/'
