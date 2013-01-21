@@ -28,6 +28,11 @@ Example `.vimrc`:
     hi link TodoItemAdditionalText Comment
     hi link TodoItemCheckBox Identifier
     hi link TodoItemDone Ignore
+		hi link TodoComment Comment							" explicit comments must be enabled for this
+
+		" define like this to enable explicit comments
+		" comments then start with //
+		let g:TodoExplicitCommentsEnabled = 1
 
 Usage
 -----

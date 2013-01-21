@@ -6,7 +6,7 @@ endif
 
 syn match TodoTitle /=.*=/ contains=TodoTitleMark
 syn match TodoTitleMark /=/ contained
-syn region TodoItem start="\s*\zs\[ \]" end="\ze\(\n\s*\n\|\[.\]\)" keepend contains=TodoItemCheckBox, TodoItemAdditionalText, TodoVimPreProcessor, TodoTitle
+syn region TodoItem start="\s*\zs\[ \]" end="\ze\(\n\s*\n\|\[.\]\)" keepend contains=TodoItemCheckBox, TodoItemAdditionalText, TodoVimPreProcessor, TodoTitle, TodoComment
 syn match TodoItemCheckBox /\[ \]/ contained
 syn match TodoItemAdditionalText /\n\_.*$/ contained contains=TodoTitle, TodoVimPreProcessor
 syn region TodoItemDone start="\s*\zs\[\S\]" end="\ze\(\n\s*\n\|\[.\]\)" contains=TodoVimPreProcessor
@@ -22,5 +22,10 @@ hi default link TodoItemCheckBox Identifier
 hi default link TodoItemDone Ignore
 hi default link TodoVimPreProcessor NonText
 hi default link TodoFileTypeSpec NonText
+
+if exists('g:TodoExplicitCommentsEnabled')
+	syn match TodoComment /\/\/.*$/
+	hi default link TodoComment Comment
+endif
 
 let b:current_syntax = 'todo'

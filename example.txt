@@ -7,8 +7,10 @@
 				item 2.2, additional text, checked (Ignore)
 
 Some (Normal) text since preceeded with a blank line
+//Explicitly commented text (Comment), if g:TodoExplicitCommentsEnabled is set
 [ ] item 3, first row (Special)
 [ ] item 4, first row with a = Header (Title) =, otherwise (Special)
 		item 4, additional text, usually (Comment)
 		but = Header (Title) = is also possible
+[ ] item 5 //explicitly commented text (Comment), if g:TodoExplicitCommentsEnabled is set
 vim: ft=todo
