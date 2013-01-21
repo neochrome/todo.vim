@@ -1,4 +1,4 @@
-setlocal comments=b:[\ ],b:[x] 
+setlocal comments=b:[\ ],s:[x],mb:[\ ],ex:[\ ] 
 setlocal autoindent
 setlocal formatoptions=tcroq
 
