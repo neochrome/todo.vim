@@ -24,7 +24,7 @@ hi default link TodoVimPreProcessor NonText
 hi default link TodoFileTypeSpec NonText
 
 if exists('g:TodoExplicitCommentsEnabled')
-	syn match TodoComment "\(^\s*\|\s\)\zs//.*\ze$" contained
+	syn match TodoComment "\(^\s*\|\s\)\zs//.*\ze$" 
 	hi default link TodoComment Comment
 endif
 
