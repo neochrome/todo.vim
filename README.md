@@ -1,8 +1,8 @@
-Super simple TODO plugin for Vim
-================================
+[![endorse](https://api.coderwall.com/neochrome/endorsecount.png)](https://coderwall.com/neochrome)
 
-Installing
-----------
+# Super simple TODO plugin for Vim
+
+## Installation
 ### With [vundle](https://github.com/gmarik/vundle)
 1. Reference the plugin in your `.vimrc` with: `Bundle 'neochrome/todo.vim`
 2. Launch `vim` and run `:BundleInstall`
@@ -17,25 +17,25 @@ Installing
 ### Traditional install:
 Drop the contents into your `~/.vim` directory as is.
 
-Configuration
--------------
+
+## Configuration
 Example `.vimrc`:
+```
+" todo.vim default highlight groups, feel free to override as wanted
+hi link TodoTitle Title
+hi link TodoTitleMark Normal
+hi link TodoItem Special
+hi link TodoItemAdditionalText Comment
+hi link TodoItemCheckBox Identifier
+hi link TodoItemDone Ignore
+hi link TodoComment Comment " explicit comments must be enabled for this
 
-    " todo.vim default highlight groups, feel free to override as wanted
-    hi link TodoTitle Title
-    hi link TodoTitleMark Normal
-    hi link TodoItem Special
-    hi link TodoItemAdditionalText Comment
-    hi link TodoItemCheckBox Identifier
-    hi link TodoItemDone Ignore
-		hi link TodoComment Comment							" explicit comments must be enabled for this
+" define like this to enable explicit comments
+" comments then start with //
+let g:TodoExplicitCommentsEnabled = 1
+```
 
-		" define like this to enable explicit comments
-		" comments then start with //
-		let g:TodoExplicitCommentsEnabled = 1
-
-Usage
------
+## Usage
 Todo items are denoted by putting square brackets with an empty space first on a line (after any indentation).
 
 Checking/unchecking is done by pressing `ctrl+space` in normal mode.
